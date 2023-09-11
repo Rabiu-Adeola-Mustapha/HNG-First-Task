@@ -8,12 +8,16 @@ app.get("/api", function (req, res) {
   let currentDay = new Date();
   let weekDays = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
   let dayOfWeek = weekDays[currentDay.getDay()];
+  const file = "https://github.com/Rabiu-Adeola-Mustapha/HNG-First-Task/blob/main/index.js,";
+  const github = "https://github.com/Rabiu-Adeola-Mustapha/HNG-First-Task";
   console.log(slack_name, track);
   const data = {
     slack_name: slack_name,
     current_day: dayOfWeek,
     utc_time: currentDay,
     track: track,
+    github_file_url: file,
+    github_repo_url : github,
     status_code: 200
   };
   res.status(200).json({
