@@ -14,7 +14,6 @@ app.get("/api", function (req, res) {
   const slack_name = req.query.slack_name;
   const track = req.query.track;
   let currentDay = new Date();
-  let utc = currentDay.getUTCDate()
   let weekDays = new Array(
     "Sunday",
     "Monday",
@@ -41,7 +40,7 @@ app.get("/api", function (req, res) {
   res.status(200).json({
     slack_name: slack_name,
     current_day: dayOfWeek,
-    utc_time: currentDay,
+    utc_time: currentDay.toISOString().slice(0, -5) + "Z",
     track: track,
     github_file_url: file,
     github_repo_url: github,
