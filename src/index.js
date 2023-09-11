@@ -8,7 +8,7 @@ app.get("/api", function (req, res) {
   let currentDay = new Date();
   let weekDays = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
   let dayOfWeek = weekDays[currentDay.getDay()];
-  const file = "https://github.com/Rabiu-Adeola-Mustapha/HNG-First-Task/blob/main/index.js,";
+  const file = "https://github.com/Rabiu-Adeola-Mustapha/HNG-First-Task/blob/main/src/index.js";
   const github = "https://github.com/Rabiu-Adeola-Mustapha/HNG-First-Task";
   console.log(slack_name, track);
   const data = {
