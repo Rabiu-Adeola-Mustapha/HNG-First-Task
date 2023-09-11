@@ -29,17 +29,23 @@ app.get("/api", function (req, res) {
     "https://github.com/Rabiu-Adeola-Mustapha/HNG-First-Task/blob/main/src/index.js";
   const github = "https://github.com/Rabiu-Adeola-Mustapha/HNG-First-Task";
   console.log(slack_name, track);
-  const data = {
-    slack_name: slack_name,
-    current_day: dayOfWeek,
-    utc_time: currentDay,
-    track: track,
-    github_file_url: file,
-    github_repo_url: github,
-    status_code: 200,
-  };
+  // const data = {
+  //   slack_name: slack_name,
+  //   current_day: dayOfWeek,
+  //   utc_time: currentDay,
+  //   track: track,
+  //   github_file_url: file,
+  //   github_repo_url: github,
+  //   status_code: 200,
+  // };
   res.status(200).json({
-    data,
+    slack_name,
+    dayOfWeek,
+    currentDay,
+    track,
+    file,
+    github,
+    status: 200
   });
 });
 
