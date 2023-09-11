@@ -6,8 +6,7 @@ const port = 3000;
 app.use(
   cors({
     origin: ["https://lime-dizzy-tuna.cyclic.app/api"],
-    methods:["GET"],
-
+    methods: ["GET"],
   })
 );
 
@@ -39,13 +38,13 @@ app.get("/api", function (req, res) {
   //   status_code: 200,
   // };
   res.status(200).json({
-    slack_name,
-    dayOfWeek,
-    currentDay,
-    track,
-    file,
-    github,
-    status: 200
+    slack_name: slack_name,
+    current_day: dayOfWeek,
+    utc_time: currentDay,
+    track: track,
+    github_file_url: file,
+    github_repo_url: github,
+    status_code: 200,
   });
 });
 
